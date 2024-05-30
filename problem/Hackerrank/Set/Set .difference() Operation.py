@@ -1,0 +1,6 @@
+n = int(input())
+st = set(map(int, input().split()))
+n1 = int(input())
+st1 = set(map(int, input().split()))
+newst = (st.difference(st1))
+print(len(newst))
