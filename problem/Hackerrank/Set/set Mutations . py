@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input());
+n1 = set(map(int, input().split()))
+n2 = int(input())
+for _ in range(n2):
+    s = input().split()
+    # s1 = int(s[1])
+    op = s[0]
+    s2 = set(map(int, input().split()))
+    if op == "intersection_update":
+        n1.intersection_update(s2)
+    elif op == "update":
+         n1.update(s2)
+    elif op == "symmetric_difference_update":
+         n1.symmetric_difference_update(s2)
+    elif op == "difference_update":
+         n1.difference_update(s2)
+
+print(sum(n1)) 
+# print(n1)
